@@ -78,6 +78,18 @@ star.classList.add("star");
     const randomLeft = Math.random() * 90 + 5;
     const randomTop = Math.random() * 55 + 5;
 
+    star.style.left = randomLeft + "%";
+    star.style.top = randomTop + "%";
+
+    starsContainer.appendChild(star);
+
+// make the star glow
+    setTimeout(() => {
+        star.classList.add("star-active");
+    }, 10);
+
+});
+
 
 
 
