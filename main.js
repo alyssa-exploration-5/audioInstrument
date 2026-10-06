@@ -25,47 +25,6 @@ const ocean = document.getElementById("ocean");
 
 
 
-
-function createJellyfish(keyData) {
-
-const jelly = document.createElement("img");
-
-jelly.src = keyData.image;
-jelly.classList.add("jellyfish");
-
-
-    const x = Math.random() * (window.innerWidth - 150);
-    const y = Math.random() * (window.innerHeight - 150);
-
-jelly.style.left = x + "px";
-jelly.style.top = y + "px";
-
-ocean.appendChild(jelly);
-const interval = setInterval(() => {
-const sound = new Audio(keyData.sound);
-sound.play();
-}, 2000);
-
-setTimeout(() => {
-
-clearInterval(interval);
-jelly.remove();
-
-}, 8000);
-}
-
-document.addEventListener("keydown", function(event) {
-const key = event.key.toLowerCase();
-if (!jellyfishMap[key]) {
-return;
-}
-
-const sound = new Audio(jellyfishMap[key].sound);
-sound.play();
-createJellyfish(jellyfishMap[key]);
-});
-`
-
 const jellyfishMap = {
     q: {
     image: "img/j1.png",
@@ -146,4 +105,6 @@ function createJellyfish(keyData) {
         jelly.remove();
 
     }, 8000);
-}
+};
+
+
