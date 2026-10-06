@@ -2,7 +2,7 @@
 
 
 h1 {
-    color: #ffffff
+    color: #e8f4ff
 }
 /*saving our custom variables*/
 /*light mode*/
@@ -34,6 +34,8 @@ body {
     
         );
     color: var(--colour-01);
+    min-height: 100vh;
+    margin: 0;
 }
 
 dialog[open] {
