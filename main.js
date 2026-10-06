@@ -88,6 +88,15 @@ star.classList.add("star");
         star.classList.add("star-active");
     }, 10);
 
+    setTimeout(() => {
+    star.classList.add("star-fade");
+
+    setTimeout(() => {
+        star.remove();
+    }, 500);
+
+}, 900);
+
 });
 
 
