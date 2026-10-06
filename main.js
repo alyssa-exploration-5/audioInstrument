@@ -18,7 +18,18 @@ introModal.close();
 });
 
 
+// spawning jellyfish randomly
+function createJellyfish(keyData) {
+
+const jelly = document.createElement("img");
+
+jelly.src = keyData.image;
+jelly.classList.add("jellyfish");
 const jellyfishMap = {
+
+    const x = Math.random() * (window.innerWidth - 150);
+    const y = Math.random() * (window.innerHeight - 150);
+
 q: {
 image: "img/j1.png",
 sound: "sounds/1.mp3"
