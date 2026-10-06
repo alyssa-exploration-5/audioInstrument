@@ -1,28 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+h1 {
+    color: #ffffff
+}
 /*saving our custom variables*/
 /*light mode*/
 :root {
-    --colour-01: black;
-    --colour-02: white;
-    --colour-03: darkgray;
-    --colour-04: lightgray;
+        --colour-01: #1b1c1b;
+        --colour-02: rgb(152, 158, 192);
+        --colour-03: rgb(91, 117, 164);
+        --colour-04: rgb(47, 67, 106);
     --border: 0.5rem inset var(--colour-03);
 }
 
 /*dark mode*/
 @media (prefers-color-scheme: dark) {
     :root {
-        --colour-01: #f0f6f0;
-        --colour-02: rgb(142, 162, 243);
-        --colour-03: lightgray;
-        --colour-04: darkgray;
+        --colour-01: #1b1c1b;
+        --colour-02: rgb(152, 158, 192);
+        --colour-03: rgb(91, 117, 164);
+        --colour-04: rgb(47, 67, 106);
     }
 }
 
 body {
     font-family: "Work Sans", sans-serif;
-    background-color: var(--colour-02);
+    background: linear-gradient(
+        to bottom,
+        #0a1240 0%,
+        #0b1f55 55%,
+        #1a0f3d 100%
+    
+        );
     color: var(--colour-01);
 }
 
