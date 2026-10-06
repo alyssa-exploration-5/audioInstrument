@@ -23,7 +23,7 @@ introModal.close();
 
 const ocean = document.getElementById("ocean");
 
-// spawning jellyfish randomly
+
 
 
 function createJellyfish(keyData) {
@@ -82,40 +82,40 @@ const jellyfishMap = {
     sound: "sounds/3.mp3"
     },
 
-r: {
-image: "img/j4.png",
-sound: "sounds/4.mp3"
-},
+    r: {
+    image: "img/j4.png",
+    sound: "sounds/4.mp3"
+    },
 
-t: {
-image: "img/j5.png",
-sound: "sounds/5.mp3"
-},
+    t: {
+    image: "img/j5.png",
+    sound: "sounds/5.mp3"
+    },
 
-y: {
-image: "img/j6.png",
-sound: "sounds/6.mp3"
-},
+    y: {
+    image: "img/j6.png",
+    sound: "sounds/6.mp3"
+    },
 
-u: {
-image: "img/j7.png",
-sound: "sounds/7.mp3"
-},
+    u: {
+    image: "img/j7.png",
+    sound: "sounds/7.mp3"
+    },
 
-i: {
-image: "img/j8.png",
-sound: "sounds/8.mp3"
-},
+    i: {
+    image: "img/j8.png",
+    sound: "sounds/8.mp3"
+    },
 
-o: {
-image: "img/j9.png",
-sound: "sounds/9.mp3"
-},
+    o: {
+    image: "img/j9.png",
+    sound: "sounds/9.mp3"
+    },
 
-p: {
-image: "img/j10.png",
-sound: "sounds/10.mp3"
-}
+    p: {
+    image: "img/j10.png",
+    sound: "sounds/10.mp3"
+    }
 
 };
 
@@ -132,3 +132,18 @@ function createJellyfish(keyData) {
     jelly.style.top = y + "px";
 
     ocean.appendChild(jelly);
+
+// play sound every 2 seconds
+    const interval = setInterval(() => {
+        const sound = new Audio(keyData.sound);
+        sound.play();
+    }, 2000);
+
+// remove jellyfish after 8 seconds
+    setTimeout(() => {
+        clearInterval(interval);
+
+        jelly.remove();
+
+    }, 8000);
+}
