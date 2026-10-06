@@ -44,7 +44,7 @@ body {
     background:
     radial-gradient(
     circle at 50% 20%,
-    #4f7f9f 0%,
+    #3a6888 0%,
     #3b6685 40%,
     #263c5d 75%,
     #102640 100%
@@ -99,7 +99,7 @@ button {
     left: 0;
     width: 100%;
     height: 160px;
-    background: #2b5f69;
+    background: #2b6967;
     clip-path: polygon(
     0% 35%,
     12% 55%,
