@@ -50,3 +50,29 @@ dialog[open] {
 button {
     border: var(--border);
 }
+
+
+#ocean {
+position: fixed;
+inset: 0;
+pointer-events: none;
+}
+
+.jellyfish {
+position: absolute;
+width: 150px;
+height: auto;
+animation: fadeOut 8s linear forwards;
+}
+
+@keyframes fadeOut {
+0% {
+opacity: 1;
+}
+75% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+}
+}
