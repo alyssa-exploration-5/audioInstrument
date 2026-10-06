@@ -108,3 +108,16 @@ function createJellyfish(keyData) {
 };
 
 
+document.addEventListener("keydown", function(event) {
+
+    const key = event.key.toLowerCase();
+    if (!jellyfishMap[key]) {
+        return;
+    }
+
+// playing the audio files & creating jellyfish img
+    const sound = new Audio(jellyfishMap[key].sound);
+    sound.play();
+    createJellyfish(jellyfishMap[key]);
+
+});
