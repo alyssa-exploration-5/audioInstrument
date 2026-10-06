@@ -28,56 +28,60 @@ introModal.close();
 
 
 const starSounds = {
-    q: {
-    sound: "sounds/q.wav",
-    star: "star-q"
+    q: { sound: "sounds/q.wav",
     },
 
-    w: {
-    sound: "sounds/w.wav",
-    star: "star-w"
+    w: { sound: "sounds/w.wav",
     },
 
-    e: {
-    sound: "sounds/e.wav",
-    star: "star-e"
+    e: { sound: "sounds/e.wav",
     },
 
-    r: {
-    sound: "sounds/r.wav",
-    star: "star-r"
+    r: { sound: "sounds/r.wav",
     },
 
-    t: {
-    sound: "sounds/t.wav",
-    star: "star-t"
+    t: { sound: "sounds/t.wav",
     },
 
-    y: {
-    sound: "sounds/y.wav",
-    star: "star-y"
+    y: { sound: "sounds/y.wav",
     },
 
-    u: {
-    sound: "sounds/u.wav",
-    star: "star-u"
+    u: { sound: "sounds/u.wav",
     },
 
-    i: {
-    sound: "sounds/i.wav",
-    star: "star-i"
+    i: { sound: "sounds/i.wav",
     },
 
-    o: {
-    sound: "sounds/o.wav",
-    star: "star-o"
+    o: { sound: "sounds/o.wav",
     },
 
-    p: {
-    sound: "sounds/p.wav",
-    star: "star-p"
+    p: { sound: "sounds/p.wav",
     },
 };
+
+// find the stars container
+const starsContainer = document.querySelector(".stars");
+
+document.addEventListener("keydown", (event) => {
+
+    const key = event.key.toLowerCase();
+    if (!starSounds[key]) return;
+
+    const audio = new Audio(starSounds[key].sound);
+    audio.play();
+
+// creating a new star
+const star = document.createElement("span");
+star.classList.add("star");
+
+// MATH RANDOM TECHNIQUE - positions stars randomly in sky
+    const randomLeft = Math.random() * 90 + 5;
+    const randomTop = Math.random() * 55 + 5;
+
+
+
+
+
 
 document.addEventListener("keydown", (event) => {
 
