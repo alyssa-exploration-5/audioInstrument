@@ -28,52 +28,52 @@ const ocean = document.getElementById("ocean");
 const jellyfishMap = {
     q: {
     image: "img/j1.png",
-    sound: "sounds/1.mp3"
+    sound: "sounds/1.wav"
     },
 
     w: {
     image: "img/j2.png",
-    sound: "sounds/2.mp3"
+    sound: "sounds/2.wav"
     },
 
     e: {
     image: "img/j3.png",
-    sound: "sounds/3.mp3"
+    sound: "sounds/3.wav"
     },
 
     r: {
     image: "img/j4.png",
-    sound: "sounds/4.mp3"
+    sound: "sounds/4.wav"
     },
 
     t: {
     image: "img/j5.png",
-    sound: "sounds/5.mp3"
+    sound: "sounds/5.wav"
     },
 
     y: {
     image: "img/j6.png",
-    sound: "sounds/6.mp3"
+    sound: "sounds/6.wav"
     },
 
     u: {
     image: "img/j7.png",
-    sound: "sounds/7.mp3"
+    sound: "sounds/7.wav"
     },
 
     i: {
     image: "img/j8.png",
-    sound: "sounds/8.mp3"
+    sound: "sounds/8.wav"
     },
 
     o: {
     image: "img/j9.png",
-    sound: "sounds/9.mp3"
+    sound: "sounds/9.wav"
     },
 
     p: {
     image: "img/j10.png",
-    sound: "sounds/10.mp3"
+    sound: "sounds/10.wav"
     }
 
 };
@@ -96,7 +96,7 @@ function createJellyfish(keyData) {
     const interval = setInterval(() => {
         const sound = new Audio(keyData.sound);
         sound.play();
-    }, 2000);
+    }, 4000);
 
 // remove jellyfish after 8 seconds
     setTimeout(() => {
@@ -104,7 +104,7 @@ function createJellyfish(keyData) {
 
         jelly.remove();
 
-    }, 8000);
+    }, 7600);
 };
 
 

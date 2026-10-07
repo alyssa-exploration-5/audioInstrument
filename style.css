@@ -4,6 +4,11 @@
 h1 {
     color: #e8f4ff
 }
+
+p {
+    color: #e8f4ff
+}
+
 /*saving our custom variables*/
 /*light mode*/
 :root {
@@ -62,10 +67,11 @@ pointer-events: none;
 position: absolute;
 width: 150px;
 height: auto;
-animation: fadeOut 8s linear forwards;
+opacity: 0;
+animation: jellyfishFade 8s ease-in-out forwards;
 }
 
-@keyframes fadeInOut {
+@keyframes jellyfishFade {
     0% {
         opacity: 0;
     }
